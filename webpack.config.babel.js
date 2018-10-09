@@ -37,7 +37,10 @@ let config = {
         test: /\.pug$/,
         loader: extractHtml.extract({
           loader: ['html-loader', 'pug-html-loader?pretty&exports=false']
-        })
+        }),
+        options: {
+          data: {test: 'Alexander test'}
+        }
       },
       {
         test: /\.scss$/,
